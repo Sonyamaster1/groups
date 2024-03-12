@@ -7,7 +7,7 @@ export interface IFetchParams {
 }
 
 async function getGroups(params?: IFetchParams): Promise<GetGroupsResponse> {
-  const res = await fetch('./src/mocks/db.json');
+  const res = await fetch('/db.json');
   if (!res.ok) {
     throw new Error('Error when fetching groups data');
   }
